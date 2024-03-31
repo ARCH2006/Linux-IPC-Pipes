@@ -89,12 +89,27 @@ printf("THE RESULTS OF CLIENTS ARE ...... \n"); write(1,buff,n);
 
 
 ## C Program that illustrate communication between two process using named pipes using Linux API system calls
-
+```
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+int main(){
+int res = mkfifo("/tmp/my_fifo", 0777);
+if (res == 0) printf("FIFO created\n");
+exit(EXIT_SUCCESS);
+}
+```
 
 
 
 
 ## OUTPUT
+![Screenshot 2024-03-31 135311](https://github.com/ARCH2006/Linux-IPC-Pipes/assets/144300030/cca8d361-19a6-4621-ae97-5b417fcedaed)
+![Screenshot 2024-03-31 135452](https://github.com/ARCH2006/Linux-IPC-Pipes/assets/144300030/d63d8a22-5002-4118-b134-336cf2eb45e6)
+
 
 
 # RESULT:
